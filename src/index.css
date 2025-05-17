@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("/fonts/Yekan-Bakh-FaN-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh En";
+  src: url("/fonts/Yekan-Bakh-En-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  direction: rtl;
+  color-scheme: dark;
+  font-family:
+    "Yekan Bakh", "Yekan Bakh En", system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+}
+
+@layer utilities {
+  .bg-custom-gradient {
+    background: linear-gradient(
+      360deg,
+      rgba(253, 65, 65, 0.2) 0%,
+      rgba(253, 65, 65, 0) 100%
+    );
+  }
+}
+
+.main-poster-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 75%,
+    rgb(0, 0, 0) 100%
+  );
+
+  @media (min-width: 768px) {
+    background:
+      linear-gradient(
+        270deg,
+        rgb(0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 10%,
+        rgba(0, 0, 0, 0.5) 30%,
+        rgba(0, 0, 0, 0) 60%
+      ),
+      linear-gradient(
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.5) 75%,
+        rgb(0, 0, 0) 100%
+      ),
+      linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 7rem);
+  }
+}
